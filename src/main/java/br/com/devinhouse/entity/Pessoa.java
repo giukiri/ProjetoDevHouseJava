@@ -23,7 +23,7 @@ public abstract class Pessoa {
 	
 	public abstract PerfilEnum getPerfil();
 	
-	public void criarPessoa(String nome, String sobrenome, LocalDate dataNascimento, String cpf,
+	private void criarPessoa(String nome, String sobrenome, LocalDate dataNascimento, String cpf,
 			String enderecoCompleto) throws CPFNaoValido {
 		gerarIdetificador();
 		this.nome = nome;
