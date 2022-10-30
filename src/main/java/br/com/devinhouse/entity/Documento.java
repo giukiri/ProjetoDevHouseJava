@@ -11,7 +11,6 @@ public class Documento {
     private String link;
     private EstadoEnum estado;
     private LocalDateTime dataCriacao;
-    private LocalDateTime dataAlteracao;
 
     public Documento(Pessoa coloboradorCriouDocumento, String link) {
       criarDocumento(coloboradorCriouDocumento,link);
@@ -19,10 +18,6 @@ public class Documento {
 
     public LocalDateTime getDataCriacao() {
         return dataCriacao;
-    }
-
-    public LocalDateTime getDataAlteracao() {
-        return dataAlteracao;
     }
 
     public Integer getIdentificador() {
@@ -63,6 +58,7 @@ public class Documento {
 
     private void criarDocumento(Pessoa colaboradorCriouDocumento, String link){
         this.identificador = GeradorIdentificador.getProximoIdentificador();
+        this.link = link;
         this.coloboradorCriouDocumento = colaboradorCriouDocumento;
         this.colaboradorResponsavel = colaboradorCriouDocumento;
         this.dataCriacao = LocalDateTime.now();

@@ -1,0 +1,7 @@
+package br.com.devinhouse.entity;
+
+public enum TipoAcaoEnum {
+
+    ACESSO, RELATORIO, CRIAR_DOCUMENTO, ENCAMINHAR_DOCUMENTO, RECUSAR_DOCUMENTO, TRAMITAR_DOCUMENTO, ARQUIVAR_DOCUMENTO;
+
+}
